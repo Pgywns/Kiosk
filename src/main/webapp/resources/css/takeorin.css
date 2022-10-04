@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.wrap {
+	width: 950px;
+	height:1050px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #088A29;
+	font-family: 'Jua', sans-serif;
+}
+
+.orderchoice {
+	display: inline-block;
+	background-color: white;
+	margin: 10px;
+	border-radius: 15px;
+	font-size: 17px;
+	color: red;
+	cursor: pointer;
+}
+
+.choiceimg {
+	width: 300px;
+	height: 350px;
+	border-radius: 15px;
+}
+
+.choiceimg h2 {
+	margin-bottom: 10px;
+}
+
+.takeorin {
+	margin-top: 95px;
+	color: white;
+	font-size: 20px;
+}

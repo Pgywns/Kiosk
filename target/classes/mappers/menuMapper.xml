@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.mappers.menu">
+
+	<select id="setlist" resultType="com.spring.domain.MenuVO">
+		select
+		name, price, image, productid, category
+		from kiosk.menu
+		where category = 1
+	</select>
+	
+	<select id="morninglist" resultType="com.spring.domain.MenuVO">
+		select
+		name, price, image, productid, category
+		from kiosk.menu
+		where category = 2
+	</select>
+	
+	<select id="burgerlist" resultType="com.spring.domain.MenuVO">
+		select
+		name, price, image, productid, category
+		from kiosk.menu
+		where category = 3
+	</select>
+	
+	<select id="sidelist" resultType="com.spring.domain.MenuVO">
+		select
+		name, price, image, productid, category
+		from kiosk.menu
+		where category = 4
+	</select>
+	
+	<select id="drinklist" resultType="com.spring.domain.MenuVO">
+		select
+		name, price, image, productid, category
+		from kiosk.menu
+		where category = 5
+	</select>
+	
+	<select id="ingrelist" resultType="com.spring.domain.MenuVO">
+		select
+		name, price, productid, category
+		from kiosk.menu
+		where category = 6
+	</select>
+	
+	<insert id="insertcart">
+		insert into cart(productid, ordernumber)
+		values(#{menuname}, #{ordernumber})
+	</insert>
+	
+	<delete id="deletecart">
+		delete cart where ordernumber=#{ordernumber}
+	</delete>
+	
+</mapper>
